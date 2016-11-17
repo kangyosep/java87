@@ -1,5 +1,0 @@
-apply plugin: "java"
-//apply plugin: "eclipse"
-//이클립스 웹 프로젝트 설정 파일을 만들어 주는 도구를 가져온다.
-apply plugin: "eclipse-wtp"
-apply plugin: "war" 
