@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<!DOCTYPE html><html class=''>
+<!DOCTYPE html><html lang="ko"class=''>
 <head><script src='//production-assets.codepen.io/assets/editor/live/console_runner-5710c30fb566082d9fcb6e7d97ee7e3f2a326128c9f334a4231b6fd752b29965.js'></script><script src='//production-assets.codepen.io/assets/editor/live/events_runner-d5e4bf42585b8da8c18f7d963dbfc17cd66a79aa586c9448c4de8d6952ee9d97.js'></script><script src='//production-assets.codepen.io/assets/editor/live/css_live_reload_init-25d1423d5d6fb975e7d61832d2c061422a94963ca446583b965dfc5569147311.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" /><link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" /><link rel="canonical" href="http://codepen.io/egjs/pen/ONWbGJ" />
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootflat/2.0.4/css/bootflat.min.css">
 
 
-<style class="cp-pen-styles">body {background-color: #f1f2f6;}
+ <style class="cp-pen-styles">body {background-color: #f1f2f6;}
 .item,
 .grid-item, .grid-sizer {
   width:50%;
@@ -21,7 +21,7 @@
     padding-right: 15px;
     padding-left: 15px;
 }
-@media (min-width: 768px) {
+ @media (min-width: 768px) {
   .item,
   .grid-item, .grid-sizer  {
     width : 33.33333333%;
@@ -38,7 +38,7 @@
   .grid-item, .grid-sizer  {
     width : 16.66666667%;
   }
-}
+} 
 
 #stats {
     width: 80px;
@@ -86,7 +86,7 @@
     border: none;
     margin: 5px;
     outline: none;
-}</style></head><body>
+}</style> </head><body>
 <div class="container">
 
     
@@ -112,8 +112,16 @@
     {{~/each~}}
 </script>
 
-<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-58d22c749295bca52f487966e382a94a495ac103faca9206cbd160bdf8aedf2a.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js'></script></script><script src='https://cdnjs.cloudflare.com/ajax/libs/masonry/4.0.0/masonry.pkgd.min.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.0/imagesloaded.pkgd.min.js'></script>
-<script>var template = Handlebars.compile($("#items-template").html());
+<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-58d22c749295bca52f487966e382a94a495ac103faca9206cbd160bdf8aedf2a.js'>
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js'>
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js'>
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/masonry/4.0.0/masonry.pkgd.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.0/imagesloaded.pkgd.min.js'></script>
+<script>
+var template = Handlebars.compile($("#items-template").html());
 var data = {
     getItems: function(groupNo) {
         groupNo *= 30;
@@ -145,14 +153,14 @@ var msnry = new Masonry( '.grid', {
     transitionDuration: 0
 });
 
-function appendItem() {
+ function appendItem() {
     var el = getItemElement();
     $(msnry.element).append( el );
     imagesLoaded(  document.querySelector('.grid'), function() {
         msnry.appended( el );
         $('.grid').css("visibility", "visible");
     }); 
-}
+} 
 
 var loadCnt = 0;
 window.addEventListener('scroll', function() {
