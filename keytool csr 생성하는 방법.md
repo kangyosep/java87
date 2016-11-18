@@ -6,3 +6,6 @@ keytool -export -alias myclosetkeystore -storepass qwerty -file c:\keystore\mycl
 
 csr 파일을 읽을수 있게 txt로 만든다
 keytool -certreq -alias myclosetkeystore -keyalg rsa -file c:\keystore\crs.txt -keystore c:\keystore\mycloset.keystore
+
+
+참조 사이트 : https://www.lesstif.com/pages/viewpage.action?pageId=20775436
