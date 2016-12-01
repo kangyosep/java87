@@ -1,0 +1,260 @@
+@CHARSET "UTF-8";
+.item,
+.grid-item, .grid-sizer {
+  width:50%;
+  min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+ @media (min-width: 768px) {
+  .item,
+  .grid-item, .grid-sizer  {
+    width : 33.33333333%;
+  }
+}
+@media (min-width: 992px) {
+  .item ,
+  .grid-item, .grid-sizer {
+    width : 25%;
+  }
+}
+@media (min-width: 1200px) {
+  .item,
+  .grid-item, .grid-sizer  {
+    width : 16.66666667%;
+  }
+} 
+
+#stats {
+    width: 80px;
+    opacity: 0.9;
+    cursor: pointer;
+    position: fixed;
+    left: 50%;
+    margin-left: -112px;
+    top: 0px;    z-index: 110;
+
+}
+#fpsText {
+    font-size: 11px !important;
+}
+.loadCnt,
+.timeStamp {
+    height: 24px;;
+    margin: 0 5px;
+}
+.benchContainer {
+    height: 99px;width: 230px;
+-webkit-transform:  translateX(-50%);
+
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    font-size: 16px;
+    text-align: right;
+    background: rgba(255, 255, 255, 0.8);
+    background: rgb(0, 0, 34);
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    line-height: 24px;
+    font-size: 14px;
+    color: rgb(0, 255, 255);
+    padding: 6px;
+    text-align: right;
+}
+
+.benchContainer button {
+    background-color: rgba(255,255,255, .4);
+    border-radius: 5px;
+    border: none;
+    margin: 5px;
+    outline: none;
+}
+/* @media ( min-width : 1024px) {
+	#grid {
+		width: 78%;
+		margin-left: auto;
+    margin-right: auto;
+    padding-left: auto;
+    padding-right: auto;
+	}
+}
+
+@media ( min-width : 1280px) {
+	#grid {
+		width: 82.5%;
+		margin-left: auto;
+    margin-right: auto;
+    padding-left: auto;
+    padding-right: auto;
+	}
+}
+
+@media ( min-width : 1440px) {
+	#grid {
+		width: 91.3%;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: auto;
+		padding-right: auto;
+	}
+}
+
+@media ( min-width : 1600px) {
+	#grid {
+		width: 82%;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: auto;
+		padding-right: auto;
+	}
+}
+
+@media ( min-width : 1920px) {
+	#grid {
+		width: 94.763%;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: auto;
+		padding-right: auto;
+	}
+
+} */
+
+
+/* 공통적용사항 */
+
+div.thumbnail {
+  padding-top: 4%;
+  padding-left: 4%;
+  padding-right: 4%;
+  margin-top: 2%;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 3%;
+  width: 256px;
+  border-radius: 10px;;
+  box-shadow: none;
+}
+  
+div.imgContent {
+	margin: 3px;
+}
+
+/* 탑 마진 공간 */
+div.item {
+  float: left;
+  margin-top: 200px;
+}
+
+/* 카드별 사진 이미지 */
+img.img-rounded {
+	width: 230px;
+  border-radius: 2%;
+}
+
+/* 프로필 이미지 */
+img.imgProfile {
+	padding: 2px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 17px;
+  margin-left: 195px;
+}
+
+/* 옷걸이 이미지 */
+div.hanger img.imgHanger {
+	margin: 0px;
+  z-index:100;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  display: none;   
+}
+
+/* 썸네일 호버 */
+/* div.thumbnail:hover {
+	background-color: #e6e6e6 ; 
+} */
+
+/* 썸네일 호버 */
+div.thumbnail:hover {
+  background-color: #ECECEC ; 
+}
+
+div.thumbnail:hover p {
+  display: block; 
+}
+
+/* 썸네일 호버일때 옷걸이이미지 */
+div.thumbnail:hover div.hanger img.imgHanger {
+  display: block;
+}
+
+/* 썸네일 호버일때 옷걸이이미지 */
+div.thumbnail:hover div.imgContent img.img-rounded {
+}
+
+/* 옷걸이 이미지 호버시 */
+div.hanger img.imgHanger:hover {
+	opacity: 0.5;
+	cursor: pointer;
+	transition: opacity 0.5s;
+}
+/* 옷걸이 이미지 클릭시 */
+div.hanger img.imgHanger:active{
+  margin-top:3px;
+}
+/* 썸네일 호버일때 옷걸이이미지 */
+div.thumbnail:hover div.hanger {
+  display: block;
+}
+/* 썸네일 호버일때 옷걸이이미지 */
+/* div.thumbnail:hover div.hanger img.imgHanger {
+    opacity: 0.7;
+} */
+
+/* 프로필 이미지 호버시 */
+div.thumbnail:hover div.profile img.imgProfile {
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+/* 바텀 캡션 포스트 제목과 내용을 감싼 DIV */
+div.bottom_caption {
+	padding: 4%;
+}
+
+  p {
+    border-radius: 10px;
+    width: 210px;
+    background-color: black;
+    color:white;
+	  font-size: 12px;
+	  display: none;
+	  position: absolute;
+	  left: 25px;
+	  bottom: 65px;
+	  opacity: 0.5;
+	  text-align: center;
+	  cursor: pointer;
+  }
+
+div.postTitle {
+	font-weight: bold;
+	font-size: 15px;
+	margin-bottom: 2px;
+}
+
+div.postDesc {
+	font-size: 12px;
+}
+
+div.postDesc {
+}

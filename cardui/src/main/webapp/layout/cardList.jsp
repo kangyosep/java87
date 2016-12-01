@@ -2,7 +2,9 @@
     pageEncoding="UTF-8"%>
 
 <!DOCTYPE html><html lang="ko"class=''>
-<head><script src='//production-assets.codepen.io/assets/editor/live/console_runner-5710c30fb566082d9fcb6e7d97ee7e3f2a326128c9f334a4231b6fd752b29965.js'></script><script src='//production-assets.codepen.io/assets/editor/live/events_runner-d5e4bf42585b8da8c18f7d963dbfc17cd66a79aa586c9448c4de8d6952ee9d97.js'></script><script src='//production-assets.codepen.io/assets/editor/live/css_live_reload_init-25d1423d5d6fb975e7d61832d2c061422a94963ca446583b965dfc5569147311.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" /><link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" /><link rel="canonical" href="http://codepen.io/egjs/pen/ONWbGJ" />
+<head>
+<script src='//production-assets.codepen.io/assets/editor/live/console_runner-5710c30fb566082d9fcb6e7d97ee7e3f2a326128c9f334a4231b6fd752b29965.js'></script><script src='//production-assets.codepen.io/assets/editor/live/events_runner-d5e4bf42585b8da8c18f7d963dbfc17cd66a79aa586c9448c4de8d6952ee9d97.js'></script><script src='//production-assets.codepen.io/assets/editor/live/css_live_reload_init-25d1423d5d6fb975e7d61832d2c061422a94963ca446583b965dfc5569147311.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" /><link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+<link rel="canonical" href="http://codepen.io/egjs/pen/ONWbGJ" />
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <title>InfiniteGrid(Masonry)</title>
@@ -86,7 +88,7 @@
     border: none;
     margin: 5px;
     outline: none;
-}</style> </head><body>
+}</style>  </head><body>
 <div class="container">
 
     
@@ -95,9 +97,11 @@
     <!-- jumbotron -->
     
     <!-- infinite grid -->
-    <div id="grid" class="row grid" style="visibility:hidden">
-        <div class="grid-sizer"></div>
-    </div>
+   <div id="grid" class="row grid" style="visibility:hidden">
+        <div class="grid-sizer">
+        </div>
+    </div> 
+    
 </div>
 <script id="items-template" type="text/x-handlebars-template">
     {{~#each items~}}
