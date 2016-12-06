@@ -5,16 +5,20 @@ window.fbAsyncInit = function() {
 		cookie : false,
 		xfbml : true
 	});
+	FB.Event.subscribe('auth.logout', function(response) {
+		document.location.reload();
+	});
+
+   
 
 	FB.getLoginStatus(function(response) {
 		if (response.status === 'connected') {
+			
 		} else if (response.status === 'not_authorized') {
 		} else {
 		}
 	});
-	FB.Event.subscribe('auth.logout', function(response) {
-		document.location.reload();
-	});
+	
 	
 
 };

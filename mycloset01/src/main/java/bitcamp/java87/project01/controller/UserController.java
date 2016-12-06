@@ -136,12 +136,14 @@ public class UserController {
 		
 	}*/
 	@RequestMapping( value="login", method=RequestMethod.POST )
-  public @ResponseBody User login(String email,HttpSession session) throws Exception{
+  public @ResponseBody User login(String email, String pwd, HttpSession session) throws Exception{
+	  
 	  User user=userService.getUser(email);
-	  System.out.println("user값"+user);
-	 if(user != null){
-	   session.setAttribute("user",user);
-	 }
+	 	  
+	    if(user.getPwd().trim().equals(pwd.trim())){
+	      System.out.println("세션");
+  	     session.setAttribute("user",user);
+	    }
 	  return user; 
 	}
 	

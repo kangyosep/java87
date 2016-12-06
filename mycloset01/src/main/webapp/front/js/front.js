@@ -22,6 +22,7 @@ window.fbAsyncInit = function() {
 		xfbml : true
 	// parse XFBML
 	});
+	
 
 	FB.getLoginStatus(function(response) {
 
@@ -117,15 +118,18 @@ function fncLogin() {
 	}
 
 	$.post("user/login", {
-		"email" : $(".form-control").val()
+		"email" : $("#emailBtn").val(),
+		"pwd": $("#pwdBtn").val()
 	}, function checkUser(user) {
-
+			
+		console.log($("#emailBtn").val());
+		console.log($("#pwdBtn").val());
 		var dbemail = user.email;
 		var dbpwd = user.pwd;
 		console.log(dbemail);
 		console.log(dbpwd);
-		console.log($("#emailBtn").val());
-		console.log($("#pwdBtn").val());
+		
+		
 
 		if ($("#emailBtn").val() != dbemail) {
 			alert("이메일확인하십시오.")
@@ -140,7 +144,9 @@ function fncLogin() {
 			location.href = "main/cardList.jsp";
 		} else {
 			alert("로그인실패");
+			return false;
 		}
+		return false;
 	});
 
 	return false;

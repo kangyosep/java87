@@ -96,6 +96,17 @@
     outline: none;
 }</style>  </head><body>
 
+   
+
+    <div>
+          <div class="fb-messengermessageus" 
+        messenger_app_id='1222628424496492'
+        page_id='1270710446313254'
+        color="blue"
+        size="standard">
+      </div>
+    </div>
+
 
  <c:if test="${!empty user}">
     <div>

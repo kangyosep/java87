@@ -61,7 +61,7 @@ public class LogonCheckInterceptor extends HandlerInterceptorAdapter {
 					uri.indexOf("loginView") != -1 			||	uri.indexOf("login") != -1 		|| 
 					uri.indexOf("checkDuplication") != -1 ){
 			/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-			if(		uri.indexOf("addUser") != -1 ||	uri.indexOf("login") != -1  ||	uri.indexOf("checkDuplication") != -1 || uri.indexOf("fbLogin") != -1){
+			if(		uri.indexOf("addUser") != -1 ||	uri.indexOf("login") != -1  ||	uri.indexOf("checkDuplication") != -1 || uri.startsWith("fbLogin")){
 				System.out.println("[... ]");
 				System.out.println("[ LogonCheckInterceptor end........]\n");
 				return true;
