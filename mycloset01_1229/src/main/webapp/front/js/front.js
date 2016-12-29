@@ -99,7 +99,7 @@ window.fbAsyncInit = function() {
 /*******************************************************************************
  * login js start
  ******************************************************************************/
-function fncLogin(e) {
+function fncLogin() {
 	var id = document.loginForm.email.value;
 	var pw = document.loginForm.pwd.value;
 	// 이메일 유효성체크

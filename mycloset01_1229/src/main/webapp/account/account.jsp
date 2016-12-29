@@ -22,7 +22,7 @@
 
 <body>
 
-	<form name="updatUserForm" id="updatUserForm"
+	<form name="updateUserForm" id="updateUserForm"
 		enctype="multipart/form-data">
 		<div id="accountWrap" class="container">
 			<div class="row">
@@ -122,21 +122,19 @@
 
 
 	<script type="text/javascript">
-		$("#acnt-btn").click(function() {
-			var form = $('form')[0];
-			var formData = new FormData(form);
+		 $("#acnt-btn").click(function() {
+			 var form = new FormData($("#updateUserForm")[0]);
 			var pwdsize = $("#inputPwd").val();
-			var nick = $("#inputName").val();
-			var email = $("#inputEmail").val();
-		
+			alert(form);
 				if (pwdsize.length > 2) {
 				$.ajax({
 					url : '/user/updateUser',
 					processData : false,
 					contentType : false,
-					data : formData,
+					data : form,
 					type : 'POST',
 					success : function(user) {
+						location.reload();
 						location.reload();
 					}
 				});
@@ -150,6 +148,8 @@
 			}
 
 		});
+		
+	
 	</script>
 </body>
 </html>

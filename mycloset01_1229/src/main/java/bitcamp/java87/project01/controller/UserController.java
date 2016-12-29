@@ -96,17 +96,18 @@ public class UserController {
 	public @ResponseBody User updateUser(MultipartHttpServletRequest req, HttpSession session ) throws Exception {
 	
 	MultipartFile file = req.getFile("testFile");
+	
+	
 	User user = new User();
-	System.out.println("여기는업데이트");
-	user= userService.getUser(req.getParameter("email"));
+	
 	
 	if(file.getSize() != 0) {
-		System.out.println("사진파일");
-		
+		System.out.println("사진변경했을때");
 		String basePath=sc.getRealPath("/fileUpload/"+file.getOriginalFilename());
 		file.transferTo(new File(basePath));
 	}
    if(file.getOriginalFilename() == ""){
+	   System.out.println("사진변경안했을때");
 		if(req.getParameter("email") != null)
 		user.setPhot_path(userService.getUser(req.getParameter("email")).getPhot_path());
 	}else{
@@ -116,7 +117,8 @@ public class UserController {
 	user.setPwd(req.getParameter("pwd"));
 	user.setNick(req.getParameter("nick"));
    
-	 session.setAttribute("user", user);
+	System.out.println("셋팅된 유저값:"+user);
+	session.setAttribute("user", user);
 	userService.updateUser(user);
 	
 	

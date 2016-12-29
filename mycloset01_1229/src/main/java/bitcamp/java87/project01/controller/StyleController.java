@@ -115,6 +115,7 @@ public class StyleController {
       
       //File origin_file_name = new File(uploadPath2 + reFileName);
       File origin_file_name = new File(basePath);
+     
       
       System.out.println("업로드 디버깅 4");
       // 생성할 썸네일파일의 경로+썸네일파일명
