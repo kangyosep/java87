@@ -164,7 +164,8 @@
     				        swal(errorThrown);
     				    },
     				    success: function (data, textStatus, jqXHR) {
-    				    	swal("수정완료")
+    				    	swal("수정완료");
+    				    	
     				    	
     			  	    },
     				    beforeSend: function (jqXHR, settings) {

@@ -75,15 +75,15 @@ background-color:red;
 
 				<!-- /////////////////////////////////////// -->
 				<!-- /////////////////////////////////////// -->
-
+			
 				<form name="comment_input" action="/comment/addComment"
 					method="POST" id="cmt_form">
 					
-			<input type="hidden" id="styleNo" name="styleNo" value="181">
-            <input type="hidden" id="hrs" name="hrs" value="101">
-            <input type="hidden" id="nick" name="nick" value="101">
+			<input type="hidden" id="styleNo" name="styleNo" value="${style.styleNo}">
+            <input type="hidden" id="hrs" name="hrs" value="">
+            <input type="hidden" id="nick" name="nick" value="${style.user_no}">
 					<div>
-						<span id="comment_user_nick">${user.nick}</span>&nbsp&nbsp<input type="text" name="content" id="content" maxleng="2000" >
+						<span id="cmt_image"><img  src="../fileUpload/${user.phot_path}"></span><span id="comment_user_nick">${user.nick}</span>&nbsp&nbsp<input type="text" name="content" id="content" maxleng="2000" >
 						<input type="button" value="전송" id="cmt_insert" class="btn btn-default btn-sm">
 					</div>
 					
@@ -110,7 +110,8 @@ background-color:red;
 
  <script type="text/javascript">
     $("#commentButton").click(function(){
-              $.get('/comment/getCommentList?styleNo=181',function(map){
+    			
+              $.get('/comment/getCommentList?styleNo='+$("#styleNo").val(),function(map){
                    	     var row='';  	  
             	   $.each(map.commentList,function(index,comment){
                   		 row+="<div id='comment_block'><span id='cmtNo' style=visibility:hidden;'>"+comment.cmtNo+"</span>"+"<span id ='cmt_nick'> "+comment.nick+"</span>"+'&nbsp'+"<span id='cmt_content'> "+comment.content+"</span>"+'&nbsp<span id ="cmt_hrs">'+comment.hrs+"</span>";
