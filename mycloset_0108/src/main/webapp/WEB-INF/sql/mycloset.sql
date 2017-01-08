@@ -388,8 +388,18 @@ ALTER TABLE STYLE_LIKE
         REFERENCES USER_INFO (
             USER_NO
         );
+
+/* 회원일련번호 시퀀스 */
 drop sequence UNO;
 create sequence UNO
   start with 1
   increment BY 1
   maxvalue 100;
+
+/* 옷장일련번호 시퀀스 */
+DROP SEQUENCE
+seq_mycloset_cls_no;
+
+CREATE SEQUENCE seq_mycloset_cls_no
+INCREMENT BY 1 
+START WITH 1000;
